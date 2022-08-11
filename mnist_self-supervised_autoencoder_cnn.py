@@ -167,10 +167,11 @@ for epoch in range(encoder_training_epochs):
 
     print(f"{epoch} / mse loss: {loss.item()}")
 
-    plt.imshow(x[0].reshape(28, 28).cpu().detach())
-    plt.show()
-    plt.imshow(recon_x[0].reshape(28, 28).cpu().detach())
-    plt.show()
+    ## if you want to see reconstruction image uncomment here. ## 
+    # plt.imshow(x[0].reshape(28, 28).cpu().detach())
+    # plt.show()
+    # plt.imshow(recon_x[0].reshape(28, 28).cpu().detach())
+    # plt.show()
     print("----------------------------")
 
 
