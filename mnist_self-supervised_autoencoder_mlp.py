@@ -62,7 +62,7 @@ class Dec(nn.Module):
             nn.BatchNorm1d(512),
             nn.ReLU(),
 
-            nn.Linear(512, 64)
+            nn.Linear(512, 28 * 28)
         )
 
     def forward(self, x):
@@ -120,6 +120,7 @@ for epoch in range(encoder_training_epochs):
 
     print(f"{epoch} / mse loss: {loss.item()}")
 
+    ## if you want to see reconstruction image uncomment here. ## 
     # plt.imshow(x[0].reshape(28, 28).cpu().detach())
     # plt.show()
     # plt.imshow(recon_x[0].reshape(28, 28).cpu().detach())
